@@ -330,24 +330,24 @@ slider({
 
 function _csv(){return(
 `Date,Event,Description,SharedOrPersonal
-20 05 2023 00:01:16,Click button emptybox,empty,Shared
-20 05 2023 00:01:18,Load Richlink,empty,Shared
-20 05 2023 00:01:18,Click button emptybox,empty,Shared
-20 05 2023 00:01:18,Business info started,empty,Shared
-20 05 2023 00:01:18,Click button emptybox,empty,Shared
-20 05 2023 00:01:18,Load keyboards message,empty,Shared
-20 05 2023 00:01:18,Click button emptybox,empty,Shared
-20 05 2023 00:01:18,Click button emptybox,empty,Shared
-20 05 2023 00:01:18,Click button emptybox,empty,Shared
-20 05 2023 00:01:19,Click button emptybox,empty,Shared
-20 05 2023 00:01:20,Click button emptybox,empty,Shared
-20 05 2023 00:01:52,Business info closed,empty,Shared
-20 05 2023 00:01:56,Click on CRM first time,deals/kanban,Shared
-20 05 2023 00:01:56,Change archive mode,Archive clients,Shared
-20 05 2023 00:01:57,Click button emptybox,empty,Shared
-20 05 2023 00:01:57,Work,empty,Shared
-20 05 2023 00:01:58,Change archive mode,Archive chats,Shared
-20 05 2023 00:01:58,Success fetch archive by filter,Archive chats,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Load Richlink,empty,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Business info started,empty,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Load keyboards message,empty,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Business info closed,empty,Shared
+20 05 2023,Click on CRM first time,deals/kanban,Shared
+20 05 2023,Change archive mode,Archive clients,Shared
+20 05 2023,Click button emptybox,empty,Shared
+20 05 2023,Work,empty,Shared
+20 05 2023,Change archive mode,Archive chats,Shared
+20 05 2023,Success fetch archive by filter,Archive chats,Shared
 `
 )}
 
