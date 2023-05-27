@@ -738,5 +738,5 @@ export default function define(runtime, observer) {
   return main;
 }
 
-document.querySelector("body > div:nth-child(4)").style.display = "none"
-document.querySelector("body > div:nth-child(5)").style.display = "none"
+// document.querySelector("body > div:nth-child(4)").style.display = "none"
+// document.querySelector("body > div:nth-child(5)").style.display = "none"
