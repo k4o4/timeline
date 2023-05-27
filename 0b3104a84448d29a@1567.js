@@ -1,6 +1,13 @@
 // https://observablehq.com/@didoesdigital/2020-timeline@1567
 import define1 from "./e93997d5089d7165@2303.js";
 
+function _1(md){return(
+md`# 2020 Timeline`
+)}
+
+function _2(md){return(
+md`To make your own timeline, enter your events [below](https://observablehq.com/@didoesdigital/2020-timeline#csv).`
+)}
 
 function _eventsSelection(radio){return(
 radio({
@@ -31,7 +38,7 @@ function _DiDoesDigital2020Timeline(d3,DOM,params,width,title,subtitle,axis,halo
   const annotationPersonalColor = "#CADFF7";
   
   const svg = d3.select(DOM.svg(params.svg.width, params.svg.height))
-    .attr("title", "What users did")
+    .attr("title", "Timeline of Melbourne in 2020")
     .attr("id", "timeline");
   
   const chartBackground = svg.append("rect")
@@ -126,8 +133,8 @@ function _DiDoesDigital2020Timeline(d3,DOM,params,width,title,subtitle,axis,halo
     .join("circle")
       .attr("transform", d => `translate(0, ${y(d.date)})`)
       .attr("aria-hidden", "true")
-      // .attr("fill", d => d.sharedOrPersonal === "Shared" ? markerDefaultColor : markerPersonalColor)
-      // .attr("stroke", d => d.sharedOrPersonal === "Shared" ? markerDefaultColor : markerPersonalColor)
+      .attr("fill", d => d.sharedOrPersonal === "Shared" ? markerDefaultColor : markerPersonalColor)
+      .attr("stroke", d => d.sharedOrPersonal === "Shared" ? markerDefaultColor : markerPersonalColor)
       // .attr("stroke-width", 1)
       .attr("cx", 0.5)
       .attr("cy", (params.marker.radius / 2) + 0.5)
@@ -146,7 +153,7 @@ function _DiDoesDigital2020Timeline(d3,DOM,params,width,title,subtitle,axis,halo
     .join("text")
       .attr("class", "event-title")
       .style("font-weight", "400")
-      // .style("fill", ([d]) => d.sharedOrPersonal === "Shared" ? labelDefaultColor : labelPersonalColor)
+      .style("fill", ([d]) => d.sharedOrPersonal === "Shared" ? labelDefaultColor : labelPersonalColor)
       .attr("x", width >= params.smallScreenSize ? params.event.offset : params.smallScreenEvent.offset)
       .attr("y", ([, y]) => y)
       .attr("dy", "0.35em");
@@ -179,8 +186,8 @@ function _DiDoesDigital2020Timeline(d3,DOM,params,width,title,subtitle,axis,halo
   
   svg.on("touchend mouseout", function(event) {
     markers
-      .attr("fill", markerDefaultColor)
-      .attr("stroke", markerDefaultColor);
+      .attr("fill", d => d.sharedOrPersonal === "Shared" ? markerDefaultColor : markerPersonalColor)
+      .attr("stroke", d => d.sharedOrPersonal === "Shared" ? markerDefaultColor : markerPersonalColor);
     
     eventLabels
       .style("opacity", 1);
@@ -209,8 +216,8 @@ function _DiDoesDigital2020Timeline(d3,DOM,params,width,title,subtitle,axis,halo
 
       markers
         .filter((d, i) => i === dodgedIndex)
-        .attr("fill", markerDefaultColor)
-        .attr("stroke", markerDefaultColor)
+        .attr("fill", d => d.sharedOrPersonal === "Shared" ? markerDefaultColor : markerPersonalColor)
+        .attr("stroke", d => d.sharedOrPersonal === "Shared" ? markerDefaultColor : markerPersonalColor)
         .raise();
       
       tooltip.style("opacity", 1);
@@ -242,39 +249,61 @@ function _DiDoesDigital2020Timeline(d3,DOM,params,width,title,subtitle,axis,halo
 
 
 function _mdAbout(md){return(
-md``
+md`## About this timeline`
 )}
 
 function _6(md){return(
-md``
+md`I created this timeline to make sense of this nonsense year. I couldn't recall the order of certain events, or get a sense of how much time had really passed. How long was lockdown anyway? So I recorded all the events that happened to myself and those around me living in Melbourne in 2020.`
 )}
 
 function _7(md){return(
-md``
+md`You might also enjoy reading [The Year of Blur By Alex Williams - The New York Times](https://www.nytimes.com/2020/10/31/style/the-year-of-blur.html). This explains the brain fog, the strange sense of time, the drinking, the worrying, and other bizarre aspects of experiencing 2020.`
 )}
 
 function _8(md){return(
-md``
+md`Here are some of the things that happened throughout the year that this timeline doesn't capture:
+
+- The ambiguity and fuzziness of rule changes and guidance. While I've noted the major "lockdown" periods, there were periods before, after, and in between when we were still fairly significantly impeded. Between lockdowns, we were technically allowed out to cafes, but strongly discouraged. It was hard to know what to do.
+- The bushfire season in Australia that burned 18.6 million hectares, destroyed over 5,900 buildings, killed at least 34 people, and killed 3 billion animals.
+- The uncertainty of what risks we were taking leaving the house when we knew so little about the disease and how it was transmitted.
+- Every time we discovered a horrifying new sympton of the COVID-19 disease.
+- When we stopped being able to make plans. The future was so uncertain and there were so many restrictions that our horizon shrunk down to a day or two at best.
+- Anxiety about shopping and buying food. How would we safely acquire food to eat? How would we deal with panic buying? Where would we get toilet paper from? How would we deal with 2-item limits? How would we deal with restrictions on online grocery shopping? How would we manage dietary needs and physical challenges?
+- Sewing masks, baking sourdough, and all the hobbies we started.
+- Deteriorating relations with China.
+- The wider racial justice movement.
+- Everything else that happened abroad: Captain Sir Thomas Moore raising £30 million for NHS Charities Together by walking, climate change, Scotland making sanitary products free, Africa declared free of wild polio, Trump's impeachment, Trump suggesting people drink bleach to cure the coronavirus, the Harvey Weinstein verdict, Kamala Harris as Democratic Vice President-Elect, the US election, the death of Ruth Bader Ginsburg, Brexit, the COVID-19 toll, Ukrainian Boeing 737 plane crash in Iran, Elliot Page announcing he is transgender, Prince Harry and Meghan Markle stepping back from royalty, Grimes and Elon Musk named their son “X AE A-12”, her Excellency Sarah Al Amiri is the science lead on Hope, the United Arab Emirates' first mission to Mars, and so much more…
+`
 )}
 
 function _mdNotesAboutTheData(md){return(
-md``
+md`## Notes about the data`
 )}
 
 function _10(md){return(
-md``
+md`I focused on events that I personally remember happening when it happened, rather than those I heard about later. I also focused on events that directly affected Victorians and Australians, especially in Melbourne.`
 )}
 
 function _11(md){return(
-md``
+md`For rule changes implemented at 11.59pm, I generally rounded up to the next day, because that's when the rule started having an impact on me. I also focused on when rules came into effect rather than when they were announced, except where the announcement itself was significant.`
 )}
 
 function _mdResources(md){return(
-md``
+md`## Resources`
 )}
 
 function _13(md){return(
-md``
+md`Here are some useful resources I found for looking up dates of events:
+
+- [Wikipedia: 2020 in Australia](https://en.wikipedia.org/wiki/2020_in_Australia)
+- [COVID-19 pandemic in Australia](https://en.wikipedia.org/wiki/COVID-19_pandemic_in_Australia)
+- [ABC: Victoria coronavirus restrictions: Daniel Andrews says Melbourne's lockdown to ease from Wednesday](https://www.abc.net.au/news/2020-10-26/coronavirus-restrictions-in-melbourne-easing-vic-premier-says/12813254): “people in Melbourne, who have been living under stage three restrictions since July 9 and stage four restrictions since August 2.”
+- [ABC: Victoria in stage 3 coronavirus shutdown restrictions, 30 March 2020](https://www.abc.net.au/news/2020-03-30/victoria-stage-3-coronavirus-restrictions-as-cases-rise/12101632)
+- Media releases such as [DHHS: Coronavirus update for Victoria - 1 June 2020](https://www.dhhs.vic.gov.au/coronavirus-update-victoria-1-june-2020)
+- [ABC: Melbourne enters new coronavirus lockdown](https://www.abc.net.au/news/2020-07-07/melbourne-lockdown-daniel-andrews-key-points/12431708): “These stay-at-home orders will come into effect at 11:59pm on July 8”
+- [ABC: Melbourne placed under stage 4 coronavirus lockdown](https://www.abc.net.au/news/2020-08-02/victoria-coronavirus-restrictions-imposed-death-toll-cases-rise/12515914)
+- [ABC: Melbourne's coronavirus restrictions ease as Victorian Premier Daniel Andrews announces end to lockdown](https://www.abc.net.au/news/2020-10-26/melbourne-coronavirus-restrictions-daniel-andrews-lockdown/12812858): “The city will be able to take some "big steps" from 11:59pm on Tuesday October 27.”
+`
 )}
 
 function _mdAppendix(md){return(
@@ -282,11 +311,11 @@ md`## Appendix`
 )}
 
 function _title(text){return(
-text({title: "Chart title", placeholder: "Title A (placeholder)", value: "Title A "})
+text({title: "Chart title", placeholder: "2020 timeline", value: "Melbourne in 2020"})
 )}
 
 function _subtitle(text){return(
-text({title: "Chart subtitle", value: "Subtitle A"})
+text({title: "Chart subtitle", value: "One Aussie’s effort to make sense of it"})
 )}
 
 function _labelSeparation(slider){return(
@@ -504,11 +533,11 @@ function _sourceData(d3,csv)
       });
   return d3.csvParse(csvString, rowConversionFunction);
 
-  const extraPropertiesSource = {
-    title: "Title B",
-    subtitle: "Subtitle B"
-  };
-  return Object.assign(dataObjectTarget, extraPropertiesSource);
+  // const extraPropertiesSource = {
+  //   title: "My 2020 timeline",
+  //   subtitle: "One Aussie's story"
+  // };
+  // return Object.assign(dataObjectTarget, extraPropertiesSource);
 }
 
 
@@ -779,15 +808,15 @@ export default function define(runtime, observer) {
   main.variable(observer("viewof eventsSelection")).define("viewof eventsSelection", ["radio"], _eventsSelection);
   main.variable(observer("eventsSelection")).define("eventsSelection", ["Generators", "viewof eventsSelection"], (G, _) => G.input(_));
   main.variable(observer("DiDoesDigital2020Timeline")).define("DiDoesDigital2020Timeline", ["d3","DOM","params","width","title","subtitle","axis","halo","lockdownData","y","data","dodge","labelSeparation","html"], _DiDoesDigital2020Timeline);
-  // main.variable(observer("mdAbout")).define("mdAbout", ["md"], _mdAbout);
-  // main.variable(observer()).define(["md"], _6);
-  // main.variable(observer()).define(["md"], _7);
-  // main.variable(observer()).define(["md"], _8);
+  main.variable(observer("mdAbout")).define("mdAbout", ["md"], _mdAbout);
+  main.variable(observer()).define(["md"], _6);
+  main.variable(observer()).define(["md"], _7);
+  main.variable(observer()).define(["md"], _8);
   main.variable(observer("mdNotesAboutTheData")).define("mdNotesAboutTheData", ["md"], _mdNotesAboutTheData);
-  // main.variable(observer()).define(["md"], _10);
-  // main.variable(observer()).define(["md"], _11);
+  main.variable(observer()).define(["md"], _10);
+  main.variable(observer()).define(["md"], _11);
   main.variable(observer("mdResources")).define("mdResources", ["md"], _mdResources);
-  // main.variable(observer()).define(["md"], _13);
+  main.variable(observer()).define(["md"], _13);
   main.variable(observer("mdAppendix")).define("mdAppendix", ["md"], _mdAppendix);
   main.variable(observer("viewof title")).define("viewof title", ["text"], _title);
   main.variable(observer("title")).define("title", ["Generators", "viewof title"], (G, _) => G.input(_));
