@@ -796,20 +796,20 @@ require("d3@6")
 
 export default function define(runtime, observer) {
   const main = runtime.module();
-  main.variable(observer()).define(["md"], _1);
-  main.variable(observer()).define(["md"], _2);
+  // main.variable(observer()).define(["md"], _1);
+  // main.variable(observer()).define(["md"], _2);
   main.variable(observer("viewof eventsSelection")).define("viewof eventsSelection", ["radio"], _eventsSelection);
   main.variable(observer("eventsSelection")).define("eventsSelection", ["Generators", "viewof eventsSelection"], (G, _) => G.input(_));
   main.variable(observer("DiDoesDigital2020Timeline")).define("DiDoesDigital2020Timeline", ["d3","DOM","params","width","title","subtitle","axis","halo","lockdownData","y","data","dodge","labelSeparation","html"], _DiDoesDigital2020Timeline);
   main.variable(observer("mdAbout")).define("mdAbout", ["md"], _mdAbout);
-  main.variable(observer()).define(["md"], _6);
-  main.variable(observer()).define(["md"], _7);
-  main.variable(observer()).define(["md"], _8);
+  // main.variable(observer()).define(["md"], _6);
+  // main.variable(observer()).define(["md"], _7);
+  // main.variable(observer()).define(["md"], _8);
   main.variable(observer("mdNotesAboutTheData")).define("mdNotesAboutTheData", ["md"], _mdNotesAboutTheData);
-  main.variable(observer()).define(["md"], _10);
-  main.variable(observer()).define(["md"], _11);
+  // main.variable(observer()).define(["md"], _10);
+  // main.variable(observer()).define(["md"], _11);
   main.variable(observer("mdResources")).define("mdResources", ["md"], _mdResources);
-  main.variable(observer()).define(["md"], _13);
+  // main.variable(observer()).define(["md"], _13);
   main.variable(observer("mdAppendix")).define("mdAppendix", ["md"], _mdAppendix);
   main.variable(observer("viewof title")).define("viewof title", ["text"], _title);
   main.variable(observer("title")).define("title", ["Generators", "viewof title"], (G, _) => G.input(_));
