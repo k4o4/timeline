@@ -1,0 +1,14 @@
+{
+  "name": "@didoesdigital/2020-timeline",
+  "main": "0b3104a84448d29a@1567.js",
+  "version": "1567.0.0",
+  "homepage": "https://observablehq.com/@didoesdigital/2020-timeline",
+  "author": {
+    "name": "Di",
+    "url": "https://observablehq.com/@didoesdigital"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
